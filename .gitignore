@@ -1,0 +1,10 @@
+.vs
+*.user
+/install
+/packages
+/Websites
+node_modules/
+bin
+obj
+**/src/components/**/*.js
+**/src/types/**/*.js

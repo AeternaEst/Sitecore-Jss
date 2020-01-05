@@ -1,0 +1,15 @@
+# We can reuse this content definition in multiple places because it:
+# - has an ID
+# - is under component-content (normally) or content
+# Reuse is accomplished by referencing the content by ID in a route definition.
+id: primary-navigation
+componentName: Navigation
+displayName: Navigation
+fields:
+        logo:
+            src: /data/media/img/jss_logo.png
+            alt: Sitecore JSS Logo
+        title: "Blogsite"
+        manchet: " - Best blogs in the world"
+
+

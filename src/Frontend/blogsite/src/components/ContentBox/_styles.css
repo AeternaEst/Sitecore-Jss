@@ -1,0 +1,16 @@
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box__image {
+    padding: 0 20px;
+    max-width: 400px;
+    height: 200px;
+}
+
+.content-box__link {
+    padding-top: 50px;
+    text-decoration: none;
+}

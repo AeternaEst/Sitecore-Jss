@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    background-color: rebeccapurple;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.navigation__left {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__title {
+    font-size: 30px;
+    margin: 0;
+}
+
+.navigation__manchet {
+    font-style: italic;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.navigation__link a {
+    color: black;
+}
+
+.navigation__link a:visited {
+    color: black;
+}

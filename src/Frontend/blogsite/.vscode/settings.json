@@ -1,0 +1,24 @@
+{
+    "eslint.autoFixOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[scss]": {
+        "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+     },
+     "files.exclude": {
+        "src/components/**/*.js": true,
+        "src/types/**/*.js": true,
+        "node_modules": true,
+        "LICENSE.txt": true
+    }
+}

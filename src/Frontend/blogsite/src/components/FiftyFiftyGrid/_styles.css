@@ -1,0 +1,12 @@
+.fifty-fifty-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.fifty-fifty-grid-left {
+    flex-basis: 50%;;
+}
+
+.fifty-fifty-grid-right {
+    flex-basis: 50%;;
+}
