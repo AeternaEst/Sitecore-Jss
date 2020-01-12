@@ -4,50 +4,11 @@
 
 <b>Sitecore installation:</b>
 1. Clone the repo into a folder of your choice
-2. Setup an XP0 single developer instance by following the quick installation guide for Sitecore 9.2.0
-3. My XP0-SingleDeveloper.ps1 variables look like this:
-  # The Prefix that will be used on SOLR, Website and Database instances.
-  $Prefix = "sitecorejss.9.2.xp0"
-  # The Password for the Sitecore Admin User. This will be regenerated if left on the default.
-  $SitecoreAdminPassword = "b"
-  # The root folder with the license file and WDP files.
-  $SCInstallRoot = "C:\Projects\Local\SitecoreJss\install"
-  # The name for the XConnect service.
-  $XConnectSiteName = "$prefix.xconnect"
-  # The Sitecore site instance name.
-  $SitecoreSiteName = "$prefix.sc"
-  # Identity Server site name
-  $IdentityServerSiteName = "$prefix.identityserver"
-  # The Path to the license file
-  $LicenseFile = "$SCInstallRoot\license.xml"
-  # The URL of the Solr Server
-  $SolrUrl = "https://localhost:8983/solr"
-  # The Folder that Solr has been installed to.
-  $SolrRoot = "C:\Program Files\Solr\solr-7.5.0"
-  # The Name of the Solr Service.
-  $SolrService = "Solr7.5.0"
-  # The DNS name or IP of the SQL Instance.
-  $SqlServer = "."
-  # A SQL user with sysadmin privileges.
-  $SqlAdminUser = "sa"
-  # The password for $SQLAdminUser.
-  $SqlAdminPassword = "<insert sa user password>"
-  # The path to the XConnect Package to Deploy.
-  $XConnectPackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9* rev. * (OnPrem)_xp0xconnect.scwdp.zip").FullName
-  # The path to the Sitecore Package to Deploy.
-  $SitecorePackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9* rev. * (OnPrem)_single.scwdp.zip").FullName
-  # The path to the Identity Server Package to Deploy.
-  $IdentityServerPackage = (Get-ChildItem "$SCInstallRoot\Sitecore.IdentityServer * rev. * (OnPrem)_identityserver.scwdp.zip").FullName
-  # The Identity Server password recovery URL, this should be the URL of the CM Instance
-  $PasswordRecoveryUrl = "http://$SitecoreSiteName"
-  # The URL of the Identity Server
-  $SitecoreIdentityAuthority = "https://$IdentityServerSiteName"
-  # The URL of the XconnectService
-  $XConnectCollectionService = "https://$XConnectSiteName"
-  # The random string key used for establishing connection with IdentityService. This will be regenerated if left on the default.
-  $ClientSecret = "SIF-Default"
-  # Pipe-separated list of instances (URIs) that are allowed to login via Sitecore Identity.
-  $AllowedCorsOrigins = "http://$SitecoreSiteName"
+2. Download all the required packes from sitecore or get the preset 'install' folder (recommended)
+3. Setup an XP0 single developer instance by following the quick installation guide for Sitecore 9.2.0
+  The following settings in the XP0-SingleDeveloper.ps1 must be as started below:
+    $Prefix = "sitecorejss.9.2.xp0"
+  Also remember to override the 'Site.PhysicalPath' settings directly in the '.json' files to set a custom install path
 4. Final project structure should look like the following:
 <root>
   - install
@@ -56,16 +17,31 @@
     - IdentityServer
     - Sitecore
     - XConnect
-5. Install the jss package
-6. Run a unicorn sync
+5. Install the jss package called 'Sitecore JavaScript Services Server for Sitecore 9.2 XP 12.0.0 rev. 190522' located in the install folder through the installation wizard in sitecore
+6. Install the api keys package called 'jss api key-1.0' located in install/api key through the installation wizard in sitecore
 7. Verify that sitecore works by accessing 'sitecorejss.9.2.xp0.sc/sitecore'
-8. Verify that you can access the webservice at 'http://sitecorejss.9.2.xp0.sc/sitecore/api/layout/render/jss?item=/&sc_apikey={6032E77B-7C77-4883-9D84-C575192E3F2C}'
+8. Find the api key in sitecore in the following path '/sitecore/system/Settings/Services/API Keys/Default API Key'
+9. Verify that you can access the webservice at 'http://sitecorejss.9.2.xp0.sc/sitecore/api/layout/render/jss?item=/&sc_apikey=<API KEY ID>
+10. Setup a binding manually in IIS for 'http://sitecorejss.blog.9.2.xp0.sc'
+11. Add 'sitecorejss.blog.9.2.xp0.sc' to the host file
 
-<b>Connecting the frontend</b>
+<b>Setting up the frontend in disconnected mode</b>
 1. Go to src/Frontend/blogsite and run an 'npm install'
 2. Install jss cli globally by running 'npm install -g @sitecore-jss/sitecore-jss-cli'
 3. Go to src/Frontend/blogsite and run an 'jss start'
-4. Veries that the site is running on a localhost
-...todo add info about pushing frontend site into sitecore
+4. Verify that the site is running on a localhost
+
+<b>Connecting the frontend to sitecore</b>
+1. Go to the install/api key folder and copy the 'scjssconfig' file to src/Frontend/blogsite folder
+2. Go to the install/api key folder and copy the 'blogsite.deploysecret' file to src/Frontend/blogsite/sitecore/config folder
+3. Deploy the config files by opening a shell and running 'jss deploy config'
+4. Deploy the app by opening a shell and running 'jss deploy app --includeContent --includeDictionary'
+5. Verify you can access the site at 'http://sitecorejss.blog.9.2.xp0.sc'
+6. Verify you can access sitecore in integrated mode by running a 'jss start:connected'
+
+<b>Known Errors</b>
+Error: Cannot find or do not have permissions to run node
+Solution: Add node or nvm to the enviroment 'Path' or set permissions for IIS_IUSR on node.exe
+
    
   
