@@ -37,6 +37,7 @@ if (fs.existsSync(componentManifestDefinitionsPath)) {
 }
 
 const componentOutputPath = scaffoldComponent();
+const stylesOutputPath = scaffoldStyles();
 
 console.log();
 console.log(chalk.green(`Component ${componentName} has been scaffolded.`));
@@ -51,6 +52,7 @@ if (manifestOutputPath) {
   );
 }
 console.log(`* Implement the React component in ${chalk.green(componentOutputPath)}`);
+console.log(`* Style the component in ${chalk.green(stylesOutputPath)}`);
 if (manifestOutputPath) {
   console.log(
     `* Add the component to a route layout (/data/routes) and test it with ${chalk.green(
@@ -70,18 +72,40 @@ if (manifestOutputPath) {
   TEMPLATING FUNCTIONS
 */
 
+function scaffoldStyles() {
+  const className = componentName.split(/(?=[A-Z])/).join("-").toLowerCase();
+  const stylesTemplate = `.${className} {
+
+}`;
+
+  const outputDirectoryPath = path.join(componentRootPath, componentName);
+
+  const outputFilePath = path.join(outputDirectoryPath, '_styles.css');
+
+  fs.writeFileSync(outputFilePath, stylesTemplate, 'utf8');
+
+  return outputFilePath;
+}
+
 function scaffoldComponent() {
   const exportVarName = componentName.replace(/[^\w]+/g, '');
+  const propsName = `${componentName}Props`
+  const className = componentName.split(/(?=[A-Z])/).join("-").toLowerCase();
 
-  const componentTemplate = `import React from 'react';
+  const componentTemplate = `import React, { FunctionComponent } from 'react';
 import { Text } from '@sitecore-jss/sitecore-jss-react';
+import { SimpleField } from '../../types/sitecore/layoutServiceFieldTypes';
+import { JssComponentProps } from '../../types/sitecore/layoutServiceTypes';
 
-const ${exportVarName} = (props) => (
-  <div>
-    <p>${componentName} Component</p>
-    <Text field={props.fields.heading} />
-  </div>
-);
+  interface ${propsName} {
+    title: SimpleField<string>;
+  }
+
+  const BlogPost: FunctionComponent<JssComponentProps<${propsName}>> = (props: JssComponentProps<${propsName}>): React.ReactElement => (
+    <div className="${className}">
+      <Text field={props.title} />
+    </div>
+  );
 
 export default ${exportVarName};
 `;
@@ -94,7 +118,7 @@ export default ${exportVarName};
 
   fs.mkdirSync(outputDirectoryPath);
 
-  const outputFilePath = path.join(outputDirectoryPath, 'index.js');
+  const outputFilePath = path.join(outputDirectoryPath, 'index.tsx');
 
   fs.writeFileSync(outputFilePath, componentTemplate, 'utf8');
 

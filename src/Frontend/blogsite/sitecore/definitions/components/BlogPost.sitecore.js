@@ -2,16 +2,19 @@
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
 
 /**
- * Adds the HelloWorld component to the disconnected manifest.
+ * Adds the BlogPost component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.js) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function(manifest) {
+export default function (manifest) {
   manifest.addComponent({
-    name: 'HelloWorld',
+    name: 'BlogPost',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'heading', type: CommonFieldTypes.SingleLineText },
+      { name: 'title', type: CommonFieldTypes.SingleLineText },
+      { name: 'date', type: CommonFieldTypes.Date },
+      { name: 'category', type: CommonFieldTypes.SingleLineText },
+      { name: 'text', type: CommonFieldTypes.RichText },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
