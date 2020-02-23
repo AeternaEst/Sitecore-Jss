@@ -1,7 +1,7 @@
-import React from 'react';
-import { Placeholder, Link } from '@sitecore-jss/sitecore-jss-react';
-import Helmet from 'react-helmet';
-import './styling/_root-styling.css';
+import React from "react";
+import { Placeholder, Link } from "@sitecore-jss/sitecore-jss-react";
+import Helmet from "react-helmet";
+import "./styling/_root-styling.css";
 
 /*
   APP LAYOUT
@@ -15,10 +15,15 @@ const Layout = ({ route }) => (
   <React.Fragment>
     {/* react-helmet enables setting <head> contents, like title and OG meta tags */}
     <Helmet>
-      <title>
-        Hardcoded title
-      </title>
+      <title>Hardcoded title</title>
+
+      <link
+        href="https://fonts.googleapis.com/css?family=Domine|Kreon&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
+
+    {/* <Placeholder name="ph_top" rendering={route} /> */}
 
     {/* root placeholder for the app, which we add components to using route data */}
     <div className="page-container">
