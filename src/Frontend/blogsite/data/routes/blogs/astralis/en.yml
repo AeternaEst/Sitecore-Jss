@@ -48,6 +48,11 @@ placeholders:
             alt: "blog text"
         imageHeading: "Astralis wins the ELEAGUE Major in Atlanta"
         imageManchet: "The best CS team in the world"
+    - componentName: SocialBar
+      fields:
+        socialLinks:
+          - id: social-facebook
+          - id: social-twitter
 
 
 

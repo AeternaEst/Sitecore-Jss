@@ -115,7 +115,7 @@ import { JssComponentProps } from '../../types/sitecore/layoutServiceTypes';
 
   const ${componentName}: FunctionComponent<JssComponentProps<${propsName}>> = (props: JssComponentProps<${propsName}>): React.ReactElement => (
     <div className="${className}">
-      <Text field={props.title} />
+      <Text field={props.fields.title} />
     </div>
   );
 

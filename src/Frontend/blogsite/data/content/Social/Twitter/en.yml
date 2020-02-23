@@ -1,0 +1,10 @@
+id: social-twitter
+displayName: Twitter
+# Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
+template: SocialIcon
+fields:
+  name: Twitter
+  link:
+    href: "www.twitter.com"
+    text: "Go to twitter"
+  icon: twitter

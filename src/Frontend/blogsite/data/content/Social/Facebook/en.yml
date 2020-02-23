@@ -1,0 +1,10 @@
+id: social-facebook
+displayName: Facebook
+# Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
+template: SocialIcon
+fields:
+  name: Facebook
+  link:
+    href: "www.facebook.com"
+    text: "Go to facebook"
+  icon: facebook
