@@ -1,0 +1,11 @@
+id: social-google
+displayName: Google
+# Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
+template: SocialIcon
+fields:
+  name: google
+  link:
+    href: "www.google.com"
+    text: "Google+"
+  icon: google
+  applyThemeColor: true

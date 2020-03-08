@@ -14,7 +14,8 @@ export default function(manifest) {
     fields: [
       { name: "name", type: CommonFieldTypes.SingleLineText },
       { name: "link", type: CommonFieldTypes.GeneralLink },
-      { name: "icon", type: CommonFieldTypes.SingleLineText }
+      { name: "icon", type: CommonFieldTypes.SingleLineText },
+      { name: "applyThemeColor", type: CommonFieldTypes.Checkbox }
     ]
   });
 }

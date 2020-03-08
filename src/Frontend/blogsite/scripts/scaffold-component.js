@@ -108,6 +108,7 @@ function scaffoldComponent() {
 import { Text } from '@sitecore-jss/sitecore-jss-react';
 import { SimpleField } from '../../types/sitecore/layoutServiceFieldTypes';
 import { JssComponentProps } from '../../types/sitecore/layoutServiceTypes';
+import "./_styles.css";
 
   interface ${propsName} {
     title: SimpleField<string>;

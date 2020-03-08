@@ -23,8 +23,6 @@ const Layout = ({ route }) => (
       ></link>
     </Helmet>
 
-    {/* <Placeholder name="ph_top" rendering={route} /> */}
-
     {/* root placeholder for the app, which we add components to using route data */}
     <div className="page-container">
       <Placeholder name="ph_main" rendering={route} />

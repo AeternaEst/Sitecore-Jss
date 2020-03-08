@@ -23,9 +23,19 @@ placeholders:
     - id: primary-navigation
     
     - componentName: BlogPost
+      placeholders:
+        ph_blog_post:
+          - componentName: SocialBar
+            fields:
+              shareText: "Share:"
+              socialLinks:
+                - id: social-facebook
+                - id: social-twitter
+                - id: social-google
+
       fields:
         title: Astralis is on top of the world
-        date: "2019-01-01T00:00:00Z"
+        date: "2020-02-22T23:00:00Z"
         category: "Gaming"
         text: |
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -48,11 +58,8 @@ placeholders:
             alt: "blog text"
         imageHeading: "Astralis wins the ELEAGUE Major in Atlanta"
         imageManchet: "The best CS team in the world"
-    - componentName: SocialBar
-      fields:
-        socialLinks:
-          - id: social-facebook
-          - id: social-twitter
+
+      
 
 
 

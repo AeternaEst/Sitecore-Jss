@@ -17,3 +17,8 @@ export type ImageField = {
     alt: string;
   };
 };
+
+export type ContentListField<T> = {
+  id: string;
+  fields: T;
+};
