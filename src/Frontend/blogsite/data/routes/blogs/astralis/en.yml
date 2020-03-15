@@ -20,44 +20,47 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   ph_main:
-    - id: primary-navigation
-    
-    - componentName: BlogPost
+    - componentName: BlogApp
       placeholders:
-        ph_blog_post:
-          - componentName: SocialBar
-            fields:
-              shareText: "Share:"
-              socialLinks:
-                - id: social-facebook
-                - id: social-twitter
-                - id: social-google
-
-      fields:
-        title: Astralis is on top of the world
-        date: "2020-02-22T23:00:00Z"
-        category: "Gaming"
-        text: |
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        ph_blog_app:
+          - id: primary-navigation
           
-        image:
-            src: "/data/media/img/astralis_logo.jpg"
-            alt: "blog text"
-        imageHeading: "Astralis wins the ELEAGUE Major in Atlanta"
-        imageManchet: "The best CS team in the world"
+          - componentName: BlogPost
+            placeholders:
+              ph_blog_post:
+                - componentName: SocialBar
+                  fields:
+                    shareText: "Share:"
+                    socialLinks:
+                      - id: social-facebook
+                      - id: social-twitter
+                      - id: social-google
+
+            fields:
+              title: Astralis is on top of the world
+              date: "2020-02-22T23:00:00Z"
+              category: "Gaming"
+              text: |
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                  sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                
+              image:
+                  src: "/data/media/img/astralis_logo.jpg"
+                  alt: "blog text"
+              imageHeading: "Astralis wins the ELEAGUE Major in Atlanta"
+              imageManchet: "The best CS team in the world"
 
       
 

@@ -19,9 +19,7 @@ const Layout = ({ route }) => (
     </Helmet>
 
     {/* root placeholder for the app, which we add components to using route data */}
-    <div className="page-container">
-      <Placeholder name="ph_main" rendering={route} />
-    </div>
+    <Placeholder name="ph_main" rendering={route} />
   </React.Fragment>
 );
 
