@@ -23,7 +23,7 @@ placeholders:
     - componentName: BlogApp
       placeholders:
         ph_blog_app:
-          - id: primary-navigation
+          - id: navigation-bar
           
           - componentName: BlogPost
             placeholders:

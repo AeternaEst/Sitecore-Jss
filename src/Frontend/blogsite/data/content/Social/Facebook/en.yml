@@ -3,9 +3,9 @@ displayName: Facebook
 # Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
 template: SocialIcon
 fields:
-  name: facebook
-  link:
+  socialName: facebook
+  socialLink:
     href: "www.facebook.com"
     text: "Facebook"
-  icon: facebook
+  socialIcon: facebook
   applyThemeColor: false

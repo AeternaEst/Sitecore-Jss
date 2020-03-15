@@ -1,0 +1,53 @@
+# This file contains a GraphQL query that will be executed and the result provided to
+# your JSS component. You can run this query in GraphiQL ($endpoint/ui) for a nice editing experience.
+
+# Note that we're executing _two queries_ (datasource and contextItem)
+# within the context of the IntegratedDemoQuery _operation_. This makes it
+# very efficient at gathering data from multiple sources.
+
+query NavigationBar($contextItem: String!) {
+
+  # Context/route item query
+  # $contextItem will always be set to the ID of the current context item (the route item)
+  # (as long as the GraphQLData helper is used)
+  contextItem: item(path: $contextItem) {
+    id
+  }
+
+  home: item(path: "/sitecore/content/blogsite/home") {
+    id
+    name
+    url(options: { disableLanguageEmbedding: true })
+
+    children(requirePresentation: true) {
+      id
+      url(options: { disableLanguageEmbedding: true })
+      name
+    }
+  }
+
+  social: item(path: "/sitecore/content/blogsite/Content/Social") {
+    id
+
+    children(requirePresentation: false) {
+        id
+       ...on SocialIcon {
+         socialName {
+           jss
+           value
+         }
+        socialIcon {
+           jss
+           value
+         }
+        socialLink {
+           jss
+           value
+           text
+           url
+         }
+       }
+
+    }
+  }
+}

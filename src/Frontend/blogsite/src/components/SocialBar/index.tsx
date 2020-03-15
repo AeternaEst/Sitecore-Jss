@@ -28,10 +28,10 @@ const SocialBar: FunctionComponent<JssComponentProps<SocialBarProps>> = (
       {props.fields.socialLinks.map(socialLink => (
         <Link
           key={socialLink.id}
-          field={socialLink.fields.link}
+          field={socialLink.fields.socialLink}
           className={`social-bar__link social-bar__link--theme-${
             socialLink.fields.applyThemeColor.value
-              ? socialLink.fields.name.value
+              ? socialLink.fields.socialName.value
               : ""
           }`}
         />

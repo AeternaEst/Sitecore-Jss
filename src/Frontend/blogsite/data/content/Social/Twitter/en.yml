@@ -3,9 +3,9 @@ displayName: Twitter
 # Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
 template: SocialIcon
 fields:
-  name: twitter
-  link:
+  socialName: twitter
+  socialLink:
     href: "www.twitter.com"
     text: "Twitter"
-  icon: twitter
+  socialIcon: twitter
   applyThemeColor: false

@@ -1,9 +1,9 @@
 import { SimpleField, LinkField } from "../sitecore/layoutServiceFieldTypes";
 
 interface SocialIcon {
-  name: SimpleField<string>;
-  icon: SimpleField<string>;
-  link: LinkField;
+  socialName: SimpleField<string>;
+  socialIcon: SimpleField<string>;
+  socialLink: LinkField;
   applyThemeColor: SimpleField<boolean>;
 }
 

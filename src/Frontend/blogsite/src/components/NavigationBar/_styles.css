@@ -1,0 +1,25 @@
+.navigation-bar {
+    background-color: #100f0f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.navigation-bar__navigation-items {
+    display: flex;
+}
+
+.navigation-bar__navigation-item {
+    margin: 0 10px;
+}
+
+.navigation-bar__navigation-item a {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.navigation-bar__social-media {
+    display: flex;
+}

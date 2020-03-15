@@ -12,9 +12,9 @@ export default function(manifest) {
   manifest.addTemplate({
     name: "SocialIcon",
     fields: [
-      { name: "name", type: CommonFieldTypes.SingleLineText },
-      { name: "link", type: CommonFieldTypes.GeneralLink },
-      { name: "icon", type: CommonFieldTypes.SingleLineText },
+      { name: "socialName", type: CommonFieldTypes.SingleLineText },
+      { name: "socialLink", type: CommonFieldTypes.GeneralLink },
+      { name: "socialIcon", type: CommonFieldTypes.SingleLineText },
       { name: "applyThemeColor", type: CommonFieldTypes.Checkbox }
     ]
   });

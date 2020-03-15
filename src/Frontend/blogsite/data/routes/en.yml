@@ -34,7 +34,7 @@ placeholders:
                 src: "/data/media/img/blog_text.jpg"
                 alt: "blog text"
               boxLink:
-                href: "/blogs"
+                href: "/blogs/astralis"
                 text: "Go to blogs"
         fifty-fifty-grid-right:
           - componentName: "ContentBox"
@@ -46,7 +46,7 @@ placeholders:
                 src: "/data/media/img/makemoneyblogging.png"
                 alt: "blog text"
               boxLink:
-                href: "/blogs"
+                href: "/blogs/astralis"
                 text: "Get Started"
 
 

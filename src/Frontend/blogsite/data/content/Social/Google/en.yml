@@ -3,9 +3,9 @@ displayName: Google
 # Template defines the available fields. See /sitecore/definitions/templates/Social-Icon.js
 template: SocialIcon
 fields:
-  name: google
-  link:
+  socialName: google
+  socialLink:
     href: "www.google.com"
     text: "Google+"
-  icon: google
+  socialIcon: google
   applyThemeColor: true
