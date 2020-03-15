@@ -16,11 +16,6 @@ const Layout = ({ route }) => (
     {/* react-helmet enables setting <head> contents, like title and OG meta tags */}
     <Helmet>
       <title>Hardcoded title</title>
-
-      <link
-        href="https://fonts.googleapis.com/css?family=Domine|Kreon&display=swap"
-        rel="stylesheet"
-      ></link>
     </Helmet>
 
     {/* root placeholder for the app, which we add components to using route data */}

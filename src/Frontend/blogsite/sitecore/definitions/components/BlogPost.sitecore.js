@@ -22,7 +22,8 @@ export default function(manifest) {
       { name: "image", type: CommonFieldTypes.Image },
       { name: "imageHeading", type: CommonFieldTypes.SingleLineText },
       { name: "imageManchet", type: CommonFieldTypes.SingleLineText }
-    ]
+    ],
+    placeholders: ["ph_blog_post"]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:
