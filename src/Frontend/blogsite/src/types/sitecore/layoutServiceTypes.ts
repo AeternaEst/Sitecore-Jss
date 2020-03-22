@@ -7,7 +7,9 @@ export interface JssComponentProps<T> {
   fields: T;
 }
 
-export interface JssGraphQlComponentProps {
-  fields: any;
+export interface JssGraphQlComponentProps<T> {
+  fields: {
+    data: T;
+  };
   sitecoreContext?: any;
 }

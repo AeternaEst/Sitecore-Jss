@@ -1,21 +1,33 @@
 import React, { FunctionComponent } from "react";
 import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
 import { Link as RouterLink } from "react-router-dom";
-import { homeMock } from "./mock-data";
-import { socialIconsMock } from "../../mocks/domain/socialIconsMock";
+import { homeMock, socialIconsMock } from "./mock-data";
 import "./_styles.css";
 import { withSitecoreContext } from "@sitecore-jss/sitecore-jss-react";
 import Icon from "../Icon";
+import { NavigationLink, SocialIcon } from "./types";
 
-const NavigationBar: FunctionComponent<JssGraphQlComponentProps> = (
-  props: JssGraphQlComponentProps
+export interface NavigationBarProps {
+  home: NavigationLink & {
+    children: Array<NavigationLink>;
+  };
+  social: {
+    id: string;
+    children: Array<SocialIcon>;
+  };
+}
+
+const NavigationBar: FunctionComponent<JssGraphQlComponentProps<
+  NavigationBarProps
+>> = (
+  props: JssGraphQlComponentProps<NavigationBarProps>
 ): React.ReactElement => {
   console.log("NavigationBar props", props);
 
   const disconnectedMode =
     props.sitecoreContext.route.databaseName === "available-in-connected-mode";
 
-  const home = disconnectedMode ? homeMock.home : props.fields.data.home;
+  const home = disconnectedMode ? homeMock : props.fields.data.home;
   const social = disconnectedMode ? socialIconsMock : props.fields.data.social;
 
   console.log("home", home);
@@ -34,7 +46,7 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentProps> = (
       </div>
 
       <div className="navigation-bar__social-media">
-        {social.children.map((socialIcon: any) => (
+        {social.children.map((socialIcon: SocialIcon) => (
           <a
             className="navigation-bar__social-media-link"
             key={socialIcon.id}

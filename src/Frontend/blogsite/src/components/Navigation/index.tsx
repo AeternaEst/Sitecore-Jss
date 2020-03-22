@@ -7,39 +7,9 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 
 import "./_styles.css";
-import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
 
-/* Find solution to implement later */
-// interface NavigationData {
-//   dataSource: {
-//     id: string;
-//     name: string;
-//     title: JssField<string>;
-//     manchet: JssField<string>;
-//     logo: JssField<RenderedSitecoreField>;
-//   },
-//   contextItem: {
-//     id: string;
-//     url: string;
-//     children: {
-//       id: string;
-//       url: string;
-//       name: string;
-//     }[],
-//     home: {
-//       id: string;
-//       url: string;
-//       children: {
-//         id: string;
-//         url: string;
-//         name: string;
-//       }[]
-//     }
-//   }
-// }
-
-const Navigation: React.FunctionComponent<JssGraphQlComponentProps> = (
-  props: JssGraphQlComponentProps
+const Navigation: React.FunctionComponent<any> = (
+  props: any
 ): React.ReactElement => {
   console.log("Navigation", props);
 
