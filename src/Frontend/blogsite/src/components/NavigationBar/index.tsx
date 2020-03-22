@@ -5,6 +5,7 @@ import { homeMock } from "./mock-data";
 import { socialIconsMock } from "../../mocks/domain/socialIconsMock";
 import "./_styles.css";
 import { withSitecoreContext } from "@sitecore-jss/sitecore-jss-react";
+import Icon from "../Icon";
 
 const NavigationBar: FunctionComponent<JssGraphQlComponentProps> = (
   props: JssGraphQlComponentProps
@@ -34,8 +35,12 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentProps> = (
 
       <div className="navigation-bar__social-media">
         {social.children.map((socialIcon: any) => (
-          <a key={socialIcon.id} href={socialIcon.socialLink.url}>
-            {socialIcon.socialLink.text}
+          <a
+            className="navigation-bar__social-media-link"
+            key={socialIcon.id}
+            href={socialIcon.socialLink.url}
+          >
+            <Icon id={socialIcon.socialIcon.value} />
           </a>
         ))}
       </div>

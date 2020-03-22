@@ -18,6 +18,8 @@
      "files.exclude": {
         "src/components/**/*.js": true,
         "src/types/**/*.js": true,
+        "src/utilities/**/*.js": true,
+        "src/mocks/**/*.js": true,
         "node_modules": true,
         "LICENSE.txt": true
     }
