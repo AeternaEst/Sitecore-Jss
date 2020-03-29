@@ -1,10 +1,8 @@
-// eslint-disable-next-line no-unused-vars
 import {
-  CommonFieldTypes,
   SitecoreIcon,
-  Manifest
+  Manifest,
+  CommonFieldTypes
 } from "@sitecore-jss/sitecore-jss-manifest";
-import packageJson from "../../../package.json";
 import fs from "fs";
 
 const query = fs.readFileSync(
@@ -22,7 +20,14 @@ export default function(manifest) {
     name: "NavigationBar",
     graphQLQuery: query,
     icon: SitecoreIcon.DocumentTag,
-    fields: []
+    fields: [],
+    params: [
+      {
+        name: "showSocialIcons",
+        displayName: "Show Social Icons",
+        type: CommonFieldTypes.Checkbox
+      }
+    ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

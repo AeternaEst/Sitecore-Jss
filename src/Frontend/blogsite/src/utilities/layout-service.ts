@@ -13,6 +13,7 @@ export const removeTimeFromDate = (
 };
 
 export const isDisconnectedMode = (
-  sitecoreContext: SitecoreContext<any>
+  sitecoreContext?: SitecoreContext<any>
 ): boolean =>
+  !sitecoreContext ||
   sitecoreContext.route.databaseName === DISCONNECTED_MODE_IDENTIFIER;

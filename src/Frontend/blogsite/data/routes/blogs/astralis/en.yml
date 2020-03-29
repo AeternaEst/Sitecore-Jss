@@ -23,7 +23,9 @@ placeholders:
     - componentName: BlogApp
       placeholders:
         ph_blog_app:
-          - id: navigation-bar
+          - componentName: NavigationBar
+            params: 
+              showSocialIcons: "1"
           
           - componentName: BlogPost
             placeholders:

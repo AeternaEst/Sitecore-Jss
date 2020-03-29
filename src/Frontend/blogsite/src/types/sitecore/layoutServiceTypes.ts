@@ -7,13 +7,21 @@ export interface JssComponentProps<T> {
   fields: T;
 }
 
-export interface JssGraphQlComponentProps<T> {
+export interface JssGraphQlComponentProps<T, P> {
   fields?: {
     data: T;
   };
-  sitecoreContext: SitecoreContext<T>;
-  rendering: ComponentRendering;
-  componentFactory: ComponentFactory;
+  params: P;
+  sitecoreContext?: SitecoreContext<T>;
+  rendering?: ComponentRendering;
+  componentFactory?: ComponentFactory;
+}
+
+export interface JssGraphQlComponentPropsWithData<T, P>
+  extends JssGraphQlComponentProps<T, P> {
+  fields: {
+    data: T;
+  };
 }
 
 export interface SitecoreContext<T> {

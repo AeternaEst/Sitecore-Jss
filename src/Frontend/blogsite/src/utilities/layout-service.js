@@ -6,5 +6,6 @@ export var removeTimeFromDate = function (dateField) {
     };
 };
 export var isDisconnectedMode = function (sitecoreContext) {
-    return sitecoreContext.route.databaseName === DISCONNECTED_MODE_IDENTIFIER;
+    return !sitecoreContext ||
+        sitecoreContext.route.databaseName === DISCONNECTED_MODE_IDENTIFIER;
 };

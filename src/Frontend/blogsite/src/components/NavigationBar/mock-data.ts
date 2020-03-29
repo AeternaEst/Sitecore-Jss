@@ -1,4 +1,34 @@
-import { NavigationBarProps } from "./index";
+import { NavigationBarProps, NavigationBarParams } from "./index";
+import { JssGraphQlComponentPropsWithData } from "../../types/sitecore/layoutServiceTypes";
+
+export const getNavigationBarPropsMock = (): JssGraphQlComponentPropsWithData<
+  NavigationBarProps,
+  NavigationBarParams
+> => {
+  return {
+    fields: {
+      data: {
+        home: homeMock,
+        social: socialIconsMock
+      }
+    },
+    params: {
+      showSocialIcons: true && shouldShowSocialIcons() ? "1" : undefined
+    }
+  };
+};
+
+const shouldShowSocialIcons = () => {
+  if (!window) {
+    return false;
+  }
+
+  const segments = window.location.pathname.split("/");
+  const blogsIndex = segments.findIndex(
+    segment => segment.toLocaleLowerCase() === "blogs"
+  );
+  return blogsIndex !== -1 && blogsIndex < segments.length - 1;
+};
 
 export const homeMock: NavigationBarProps["home"] = {
   id: "home",

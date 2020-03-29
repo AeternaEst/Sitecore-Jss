@@ -1,10 +1,14 @@
 .navigation-bar {
     background-color: #100f0f;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;   
     align-items: center;
     padding: 15px;
     font-size: 14px;
+}
+
+.navigation-bar--with-social-icons {
+    justify-content: space-between;
 }
 
 .navigation-bar__navigation-items {
