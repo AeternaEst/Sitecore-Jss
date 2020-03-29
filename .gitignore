@@ -8,3 +8,5 @@ bin
 obj
 **/src/components/**/*.js
 **/src/types/**/*.js
+**/src/utilities/**/*.js
+**/src/mocks/**/*.js
