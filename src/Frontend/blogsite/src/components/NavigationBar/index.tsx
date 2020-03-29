@@ -6,6 +6,7 @@ import "./_styles.css";
 import { withSitecoreContext } from "@sitecore-jss/sitecore-jss-react";
 import Icon from "../Icon";
 import { NavigationLink, SocialIcon } from "./types";
+import { getMockOrConnectedProp } from "../../utilities/graphql-util";
 
 export interface NavigationBarProps {
   home: NavigationLink & {
@@ -24,13 +25,16 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentProps<
 ): React.ReactElement => {
   console.log("NavigationBar props", props);
 
-  const disconnectedMode =
-    props.sitecoreContext.route.databaseName === "available-in-connected-mode";
-
-  const home = disconnectedMode ? homeMock : props.fields.data.home;
-  const social = disconnectedMode ? socialIconsMock : props.fields.data.social;
-
-  console.log("home", home);
+  const home = getMockOrConnectedProp<NavigationBarProps["home"]>(
+    homeMock,
+    props,
+    "home"
+  );
+  const social = getMockOrConnectedProp<NavigationBarProps["social"]>(
+    socialIconsMock,
+    props,
+    "social"
+  );
 
   return (
     <div className="navigation-bar">
