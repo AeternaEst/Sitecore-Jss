@@ -1,3 +1,6 @@
 .top-menu {
-
+    background-color: #100f0f;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
 }
