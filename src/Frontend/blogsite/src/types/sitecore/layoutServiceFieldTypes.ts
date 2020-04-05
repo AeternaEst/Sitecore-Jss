@@ -1,29 +1,31 @@
-export type SimpleField<T extends string | number | boolean> = {
+type LayoutServiceFieldType<T> =
+  | string
+  | number
+  | boolean
+  | Link
+  | Image
+  | ContentListField<T>;
+
+export type Field<T extends LayoutServiceFieldType<T>> = {
   value: T;
 };
 
-export type SimpleJssField<T extends string | number | boolean> = SimpleField<
-  T
-> & {
+export type JssField<T extends LayoutServiceFieldType<T>> = {
   jss: {
     value: T;
   };
 };
 
-export type LinkField = {
-  value: {
-    href: string;
-    text: string;
-    linkType: string;
-    id: string;
-  };
+export type Link = {
+  href: string;
+  text: string;
+  linkType: string;
+  id?: string;
 };
 
-export type ImageField = {
-  value: {
-    src: string;
-    alt: string;
-  };
+export type Image = {
+  src: string;
+  alt: string;
 };
 
 export type ContentListField<T> = {

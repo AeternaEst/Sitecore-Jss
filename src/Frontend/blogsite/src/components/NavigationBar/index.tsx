@@ -1,20 +1,19 @@
 import React, { FunctionComponent } from "react";
-import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
+import { JssGraphQlComponentPropsWithParams } from "../../types/sitecore/layoutServiceTypes";
 import { Link as RouterLink } from "react-router-dom";
 import { getNavigationBarPropsMock } from "./mock-data";
 import "./_styles.css";
 import { withSitecoreContext } from "@sitecore-jss/sitecore-jss-react";
 import Icon from "../Icon";
-import { NavigationLink, SocialIcon } from "./types";
 import { getMockOrConnectedProps } from "../../utilities/graphql-util";
+import { BaseSitecoreItem } from "../../types/sitecore/layoutServiceItemTypes";
+import { SocialIconJss } from "../../types/domain/SocialIcon/socialIcon";
 
 export interface NavigationBarProps {
-  home: NavigationLink & {
-    children: Array<NavigationLink>;
-  };
+  home: BaseSitecoreItem;
   social: {
     id: string;
-    children: Array<SocialIcon>;
+    children: SocialIconJss[];
   };
 }
 
@@ -22,11 +21,14 @@ export interface NavigationBarParams {
   showSocialIcons?: string;
 }
 
-const NavigationBar: FunctionComponent<JssGraphQlComponentProps<
+const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
   NavigationBarProps,
   NavigationBarParams
 >> = (
-  props: JssGraphQlComponentProps<NavigationBarProps, NavigationBarParams>
+  props: JssGraphQlComponentPropsWithParams<
+    NavigationBarProps,
+    NavigationBarParams
+  >
 ): React.ReactElement => {
   console.log("NavigationBar props", props);
 
@@ -54,13 +56,13 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentProps<
 
       {props.params.showSocialIcons && (
         <div className="navigation-bar__social-media">
-          {social.children.map((socialIcon: SocialIcon) => (
+          {social.children.map((socialIcon: SocialIconJss) => (
             <a
               className="navigation-bar__social-media-link"
               key={socialIcon.id}
-              href={socialIcon.socialLink.url}
+              href={socialIcon.socialLink.jss.value.href}
             >
-              <Icon id={socialIcon.socialIcon.value} />
+              <Icon id={socialIcon.socialIcon.jss.value} />
             </a>
           ))}
         </div>

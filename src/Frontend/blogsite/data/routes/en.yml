@@ -20,34 +20,12 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   ph_main:
-    - id: primary-navigation
-
-    - componentName: "FiftyFiftyGrid"
+    - componentName: BlogApp
       placeholders:
-        fifty-fifty-grid-left:
-          - componentName: "ContentBox"
-            id: "fifty-fifty-grid-left__content-box"
-            fields:
-              boxTitle: "See our collection of blogs"
-              boxManchet: "We have the best blogs in the world. Find blogs on any topic"
-              boxImage:
-                src: "/data/media/img/blog_text.jpg"
-                alt: "blog text"
-              boxLink:
-                href: "/blogs/astralis"
-                text: "Go to blogs"
-        fifty-fifty-grid-right:
-          - componentName: "ContentBox"
-            id: "fifty-fifty-grid-right__content-box"
-            fields:
-              boxTitle: "Start your own blog!"
-              boxManchet: "Earn money and fame by starting your own blog"
-              boxImage:
-                src: "/data/media/img/makemoneyblogging.png"
-                alt: "blog text"
-              boxLink:
-                href: "/blogs/astralis"
-                text: "Get Started"
+        ph_blog_app:
+          - componentName: NavigationBar
+            params: 
+              showSocialIcons: "0"
 
 
 

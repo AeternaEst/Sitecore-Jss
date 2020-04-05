@@ -2,11 +2,13 @@ import React from "react";
 import {
   Text,
   Image,
-  withSitecoreContext
+  withSitecoreContext,
 } from "@sitecore-jss/sitecore-jss-react";
 import { Link as RouterLink } from "react-router-dom";
 
 import "./_styles.css";
+
+/* LEGACY COMPONENT - NO LONGER IN USE */
 
 const Navigation: React.FunctionComponent<any> = (
   props: any

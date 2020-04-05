@@ -5,7 +5,7 @@
 # within the context of the IntegratedDemoQuery _operation_. This makes it
 # very efficient at gathering data from multiple sources.
 
-query NavigationBar($contextItem: String!) {
+query TopMenu($contextItem: String!) {
 
   # Context/route item query
   # $contextItem will always be set to the ID of the current context item (the route item)
@@ -15,17 +15,7 @@ query NavigationBar($contextItem: String!) {
   }
 
   home: item(path: "/sitecore/content/blogsite/home") {
-    id
-    name
-    displayName
     url(options: { disableLanguageEmbedding: true })
-
-    children(requirePresentation: true) {
-      id
-      displayName
-      url(options: { disableLanguageEmbedding: true })
-      name
-    }
   }
 
   social: item(path: "/sitecore/content/blogsite/Content/Social") {
@@ -46,7 +36,7 @@ query NavigationBar($contextItem: String!) {
            jss
            value
            text
-           href
+           url
          }
        }
 

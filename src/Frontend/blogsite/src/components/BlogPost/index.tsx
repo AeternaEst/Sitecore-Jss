@@ -4,24 +4,24 @@ import {
   Image,
   RichText,
   DateField,
-  Placeholder
+  Placeholder,
 } from "@sitecore-jss/sitecore-jss-react";
 import {
-  SimpleField,
-  ImageField
+  Field,
+  Image as ImageField,
 } from "../../types/sitecore/layoutServiceFieldTypes";
 import { JssComponentProps } from "../../types/sitecore/layoutServiceTypes";
 import "./_styles.css";
 import { removeTimeFromDate } from "../../utilities/layout-service";
 
 interface BlogPostProps {
-  title: SimpleField<string>;
-  date: SimpleField<string>;
-  category: SimpleField<string>;
-  text: SimpleField<string>;
-  image: ImageField;
-  imageHeading: SimpleField<string>;
-  imageManchet: SimpleField<string>;
+  title: Field<string>;
+  date: Field<string>;
+  category: Field<string>;
+  text: Field<string>;
+  image: Field<ImageField>;
+  imageHeading: Field<string>;
+  imageManchet: Field<string>;
 }
 
 const BlogPost: FunctionComponent<JssComponentProps<BlogPostProps>> = (
