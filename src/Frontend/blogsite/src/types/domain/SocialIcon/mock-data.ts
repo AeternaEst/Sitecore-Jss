@@ -15,10 +15,10 @@ export const socialIconGoogle: SocialIconJss = {
   socialLink: {
     jss: {
       value: {
-        href: "www.google.com",
+        href: "http://www.google.com",
         linkType: "external",
         text: "Google",
-        id: "google",
+        url: "www.google.com",
       },
     },
   },
@@ -44,10 +44,10 @@ export const socialIconFacebook: SocialIconJss = {
   socialLink: {
     jss: {
       value: {
-        href: "www.facebook.com",
+        href: "http://www.facebook.com",
         linkType: "external",
         text: "Facebook",
-        id: "facebook",
+        url: "www.facebook.com",
       },
     },
   },
@@ -73,10 +73,10 @@ export const socialIconTwitter: SocialIconJss = {
   socialLink: {
     jss: {
       value: {
-        href: "www.twitter.com",
+        href: "http://www.twitter.com",
         linkType: "external",
         text: "Twitter",
-        id: "twitter",
+        url: "www.twitter.com",
       },
     },
   },

@@ -5,17 +5,32 @@
 # within the context of the IntegratedDemoQuery _operation_. This makes it
 # very efficient at gathering data from multiple sources.
 
-query TopMenu($contextItem: String!) {
+query TopMenu($datasource: String!) {
 
   # Context/route item query
   # $contextItem will always be set to the ID of the current context item (the route item)
   # (as long as the GraphQLData helper is used)
-  contextItem: item(path: $contextItem) {
+  datasource(value: $datasource) {
     id
+    ...on TopMenu { 
+      searchText {
+        jss
+        value
+      }
+    }
   }
 
   home: item(path: "/sitecore/content/blogsite/home") {
+    id
+    name
+    displayName
     url(options: { disableLanguageEmbedding: true })
+    ...on AppRoute {
+      pageTitle {
+        jss
+        value
+      }
+    }
   }
 
   social: item(path: "/sitecore/content/blogsite/Content/Social") {

@@ -6,6 +6,11 @@ export const blogsMock: BaseSitecoreItem = {
   displayName: "Blogs",
   name: "blogs",
   url: "/blogs",
+  pageTitle: {
+    jss: {
+      value: "Blogs",
+    },
+  },
   children: [],
 };
 
@@ -14,6 +19,11 @@ export const homeMock: BaseSitecoreItem = {
   displayName: "Home",
   name: "home",
   url: "/",
+  pageTitle: {
+    jss: {
+      value: "Blogify",
+    },
+  },
   children: [blogsMock],
 };
 

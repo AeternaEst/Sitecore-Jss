@@ -20,7 +20,7 @@ export type Link = {
   href: string;
   text: string;
   linkType: string;
-  id?: string;
+  url: string;
 };
 
 export type Image = {

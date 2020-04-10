@@ -2,8 +2,11 @@ import React, { FunctionComponent } from "react";
 import { getSvg } from "../../utilities/svg-util";
 import "./_styles.css";
 
+export type IconId = "facebook" | "google" | "twitter" | "search";
+
 interface IconProps {
-  id: string;
+  id: IconId;
+  className?: string;
 }
 
 const Icon: FunctionComponent<IconProps> = (
@@ -12,7 +15,7 @@ const Icon: FunctionComponent<IconProps> = (
   const svgElement = getSvg(props.id);
   return (
     <div
-      className={`icon icon-${props.id}`}
+      className={`icon icon-${props.id} ${props.className || ""}`}
       dangerouslySetInnerHTML={{ __html: svgElement }}
     ></div>
   );

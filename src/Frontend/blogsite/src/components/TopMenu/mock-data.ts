@@ -9,6 +9,14 @@ export const getTopMenuPropsMock = (): JssGraphQlComponentProps<TopMenuProps> =>
       data: {
         home: homeMock,
         social: socialRootMock,
+        datasource: {
+          id: "topMenuDataSource",
+          searchText: {
+            jss: {
+              value: "Search",
+            },
+          },
+        },
       },
     },
     rendering: renderingMock,

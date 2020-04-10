@@ -2,12 +2,12 @@
 import {
   CommonFieldTypes,
   SitecoreIcon,
-  Manifest
+  Manifest,
 } from "@sitecore-jss/sitecore-jss-manifest";
 import fs from "fs";
 
 const query = fs.readFileSync(
-  "sitecore/definitions/components/NavigationBar.sitecore.graphql",
+  "sitecore/definitions/components/TopMenu.sitecore.graphql",
   "utf8"
 );
 
@@ -19,12 +19,9 @@ const query = fs.readFileSync(
 export default function(manifest) {
   manifest.addComponent({
     name: "TopMenu",
-    query: query,
+    graphQLQuery: query,
     icon: SitecoreIcon.DocumentTag,
-    fields: [
-      { name: "heading", type: CommonFieldTypes.SingleLineText },
-      { name: "searchText", type: CommonFieldTypes.SingleLineText }
-    ]
+    fields: [{ name: "searchText", type: CommonFieldTypes.SingleLineText }],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

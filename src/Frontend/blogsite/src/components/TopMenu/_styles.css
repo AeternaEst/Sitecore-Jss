@@ -3,4 +3,57 @@
     display: flex;
     justify-content: space-between;   
     align-items: center;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.top-menu__social-media {
+    display: flex;
+}
+
+.top-menu__social-media-link {
+    margin: 0 5px;
+}
+
+.top-menu__page-title {
+    margin-right: 80px;
+    text-decoration: none;
+}
+
+.top-menu__page-title h1 {
+    color: #FFFFFF;
+}
+
+.top-menu__search {
+    position: relative;
+}
+
+.top-menu__search-input {
+    position: absolute;
+    background-color: #100f0f;
+    height: 20px;
+    border-width: 0px;
+    width: 80px;
+    color: #FFFFFF;
+    transition: all 1s;
+    transform: translateY(-50%) translateX(-100%);
+}
+
+.top-menu__search-input:focus {
+    transition: all 1s;
+    width: 150px;
+}
+
+.top-menu__search-input:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: transparent
+}
+  
+.top-menu__search-input:focus::-ms-input-placeholder { /* Microsoft Edge */
+    color: transparent
+}
+
+.top-menu__search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-45%);
 }

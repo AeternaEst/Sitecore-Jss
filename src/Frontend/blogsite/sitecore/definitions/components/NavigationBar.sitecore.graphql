@@ -46,7 +46,7 @@ query NavigationBar($contextItem: String!) {
            jss
            value
            text
-           href
+           url
          }
        }
 

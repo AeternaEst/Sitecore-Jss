@@ -17,3 +17,18 @@ h6 {
     font-family: 'Domine', 'Times New Roman';
     color: #100f0f;
 }
+
+input {
+    font-family: 'Kreon', 'Serif';
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFFFFF;
+    opacity: 1; /* Firefox */
+    font-family: 'Kreon', 'Serif';
+}
+  
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #FFFFFF;
+    font-family: 'Kreon', 'Serif';
+}

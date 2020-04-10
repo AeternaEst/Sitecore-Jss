@@ -34,7 +34,8 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
 
   const { home, social } = getMockOrConnectedProps(
     getNavigationBarPropsMock(),
-    props
+    props,
+    "NavigationBar"
   ).fields.data;
 
   return (

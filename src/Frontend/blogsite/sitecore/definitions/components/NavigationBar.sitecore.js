@@ -1,7 +1,7 @@
 import {
   SitecoreIcon,
   Manifest,
-  CommonFieldTypes
+  CommonFieldTypes,
 } from "@sitecore-jss/sitecore-jss-manifest";
 import fs from "fs";
 
@@ -25,9 +25,9 @@ export default function(manifest) {
       {
         name: "showSocialIcons",
         displayName: "Show Social Icons",
-        type: CommonFieldTypes.Checkbox
-      }
-    ]
+        type: CommonFieldTypes.Checkbox,
+      },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:
