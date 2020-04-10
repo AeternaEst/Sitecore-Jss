@@ -26,3 +26,4 @@ placeholders:
           - componentName: TopMenu
             fields: 
               searchText: Search
+          - id: navigation-bar

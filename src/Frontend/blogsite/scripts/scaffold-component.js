@@ -106,12 +106,12 @@ function scaffoldComponent() {
 
   const componentTemplate = `import React, { FunctionComponent } from 'react';
 import { Text } from '@sitecore-jss/sitecore-jss-react';
-import { SimpleField } from '../../types/sitecore/layoutServiceFieldTypes';
+import { Field } from '../../types/sitecore/layoutServiceFieldTypes';
 import { JssComponentProps } from '../../types/sitecore/layoutServiceTypes';
 import "./_styles.css";
 
   interface ${propsName} {
-    title: SimpleField<string>;
+    title: Field<string>;
   }
 
   const ${componentName}: FunctionComponent<JssComponentProps<${propsName}>> = (props: JssComponentProps<${propsName}>): React.ReactElement => (

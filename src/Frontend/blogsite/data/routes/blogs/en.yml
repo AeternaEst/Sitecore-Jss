@@ -20,7 +20,14 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   ph_main:
-    - id: primary-navigation
+    - componentName: BlogApp
+      placeholders:
+        ph_blog_app:
+          - componentName: TopMenu
+            fields: 
+              searchText: Search
+          - id: navigation-bar
+          - componentName: NotYetImplemented
 
 
 
