@@ -1,0 +1,40 @@
+.blog-promotion-spot {
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 350px;
+    display: flex;
+    flex-flow: column-reverse;
+    color: #FFFFFF;
+}
+
+.blog-promotion-spot__content {
+    padding: 20px;
+    max-width: 80%;
+}
+
+.blog-promotion-spot__category {
+    background-color: #05abf1;
+    padding: 0px 5px;
+}
+
+.blog-promotion-spot__category--small {
+    font-size: 13px;
+}
+
+.blog-promotion-spot__title {
+    margin: 10px 0px;
+    color: #FFFFFF;
+}
+
+.blog-promotion-spot__title--small {
+    font-size: 18px;
+    margin: 5px 0px;
+}
+
+.blog-promotion-spot__date {
+    font-size: 12px;
+}
+
+.blog-promotion-spot__date--small {
+    font-size: 10px;
+}

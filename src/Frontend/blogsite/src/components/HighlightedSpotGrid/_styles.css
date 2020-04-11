@@ -1,0 +1,16 @@
+.highlighted-spot-grid {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    margin: 20px 0px;
+}
+
+.highlighted-spot-grid__main {
+    flex-basis: 66%;
+}
+
+.highlighted-spot-grid__right {
+    flex-basis: 33%;
+    display: flex;
+    flex-flow: column nowrap;
+}

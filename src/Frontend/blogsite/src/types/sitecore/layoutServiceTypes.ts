@@ -12,7 +12,7 @@ export interface JssComponentProps<T> extends JssComponent {
 
 export interface JssComponentPropsWithParams<T, P> extends JssComponent {
   fields: T;
-  params: P;
+  params?: P;
 }
 
 export interface JssGraphQlComponentProps<T> extends JssComponent {

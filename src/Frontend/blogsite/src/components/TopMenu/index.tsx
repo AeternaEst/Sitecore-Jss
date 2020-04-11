@@ -29,7 +29,7 @@ const TopMenu: FunctionComponent<JssGraphQlComponentProps<TopMenuProps>> = (
   console.log("TopMenu", props);
 
   const { social, home, datasource } = getMockOrConnectedProps(
-    getTopMenuPropsMock(),
+    getTopMenuPropsMock,
     props,
     "TopMenu"
   ).fields.data;

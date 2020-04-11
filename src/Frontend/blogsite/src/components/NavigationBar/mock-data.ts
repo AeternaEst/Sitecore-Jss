@@ -11,10 +11,21 @@ export const getNavigationBarPropsMock = (): JssGraphQlComponentPropsWithParams<
     fields: {
       data: {
         home: homeMock,
-        social: socialRootMock,
-      },
+        social: socialRootMock
+      }
     },
-    params: {},
-    rendering: renderingMock,
+    params: {
+      showSocialIcons: showSocialIcons()
+    },
+    rendering: renderingMock
   };
+};
+
+const showSocialIcons = (): string => {
+  const path = document.location.pathname;
+  const segments = path.split("/");
+  const blogsIndex = segments.findIndex(
+    segment => segment.toLocaleLowerCase() === "blogs"
+  );
+  return blogsIndex !== -1 && segments.length > blogsIndex ? "1" : "0";
 };

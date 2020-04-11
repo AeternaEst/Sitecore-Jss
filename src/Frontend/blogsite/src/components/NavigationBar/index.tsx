@@ -33,7 +33,7 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
   console.log("NavigationBar props", props);
 
   const { home, social } = getMockOrConnectedProps(
-    getNavigationBarPropsMock(),
+    getNavigationBarPropsMock,
     props,
     "NavigationBar"
   ).fields.data;
@@ -41,7 +41,9 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
   return (
     <div
       className={`navigation-bar ${
-        props.params?.showSocialIcons ? "navigation-bar--with-social-icons" : ""
+        props.params?.showSocialIcons === "1"
+          ? "navigation-bar--with-social-icons"
+          : ""
       }`}
     >
       <div className="navigation-bar__navigation-items">
@@ -55,7 +57,7 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
         ))}
       </div>
 
-      {props.params?.showSocialIcons && (
+      {props.params?.showSocialIcons === "1" && (
         <div className="navigation-bar__social-media">
           {social.children.map((socialIcon: SocialIconJss) => (
             <a

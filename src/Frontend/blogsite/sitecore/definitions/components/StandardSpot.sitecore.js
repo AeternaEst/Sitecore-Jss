@@ -6,16 +6,20 @@ import {
 } from "@sitecore-jss/sitecore-jss-manifest";
 
 /**
- * Adds the BlogApp component to the disconnected manifest.
+ * Adds the StandardSpot component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.js) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
 export default function(manifest) {
   manifest.addComponent({
-    name: "BlogApp",
+    name: "StandardSpot",
     icon: SitecoreIcon.DocumentTag,
-    fields: [],
-    placeholders: ["ph_blog_app_center", "ph_blog_app_top"]
+    fields: [
+      { name: "heading", type: CommonFieldTypes.SingleLineText },
+      { name: "manchet", type: CommonFieldTypes.SingleLineText },
+      { name: "text", type: CommonFieldTypes.SingleLineText },
+      { name: "image", type: CommonFieldTypes.Image }
+    ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

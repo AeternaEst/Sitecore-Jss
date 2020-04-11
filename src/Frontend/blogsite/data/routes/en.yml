@@ -30,3 +30,35 @@ placeholders:
                   fields: 
                     searchText: Search
                 - id: navigation-bar
+                - componentName: HighlightedSpotGrid
+                  placeholders:
+                    ph_highlited_spot_main:
+                      - componentName: BlogPromotionSpot
+                        fields:
+                          title: "Lorem ipsum"
+                          category: "lorem ipsum"
+                          date: "2020-02-22T23:00:00Z"
+                          image:
+                            src: "/data/media/img/astralis_logo.jpg"
+                            alt: "blog text"
+                    ph_highlited_spot_right:
+                      - componentName: BlogPromotionSpot
+                        params: 
+                          smallTexts: "1"
+                        fields:
+                          title: "Lorem ipsum"
+                          category: "lorem ipsum"
+                          date: "2020-02-22T23:00:00Z"
+                          image:
+                            src: "/data/media/img/astralis_logo.jpg"
+                            alt: "blog text"
+                      - componentName: BlogPromotionSpot
+                        params: 
+                          smallTexts: "1"
+                        fields:
+                          title: "Lorem ipsum"
+                          category: "lorem ipsum"
+                          date: "2020-02-22T23:00:00Z"
+                          image:
+                            src: "/data/media/img/astralis_logo.jpg"
+                            alt: "blog text"

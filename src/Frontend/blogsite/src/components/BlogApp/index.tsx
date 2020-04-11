@@ -37,7 +37,6 @@ class BlogApp extends React.Component<JssComponent, BlogAppState> {
         >
           <Placeholder name="ph_blog_app_center" rendering={rendering} />
         </div>
-        <Placeholder name="ph_blog_app_bottom" rendering={rendering} />
       </>
     );
   }
