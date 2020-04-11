@@ -11,13 +11,13 @@ class BlogApp extends React.Component<JssComponent, BlogAppState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      isReady: false,
+      isReady: false
     };
   }
 
   public componentDidMount() {
     this.setState({
-      isReady: true,
+      isReady: true
     });
   }
 
@@ -26,15 +26,19 @@ class BlogApp extends React.Component<JssComponent, BlogAppState> {
     const { rendering } = this.props;
     const { isReady } = this.state;
     return (
-      <div
-        className="page-container"
-        style={{
-          display: isReady ? "block" : "none",
-          visibility: isReady ? "visible" : "hidden",
-        }}
-      >
-        <Placeholder name="ph_blog_app" rendering={rendering} />
-      </div>
+      <>
+        <Placeholder name="ph_blog_app_top" rendering={rendering} />
+        <div
+          className="page-container"
+          style={{
+            display: isReady ? "block" : "none",
+            visibility: isReady ? "visible" : "hidden"
+          }}
+        >
+          <Placeholder name="ph_blog_app_center" rendering={rendering} />
+        </div>
+        <Placeholder name="ph_blog_app_bottom" rendering={rendering} />
+      </>
     );
   }
 }

@@ -24,7 +24,7 @@ export interface JssGraphQlComponentProps<T> extends JssComponent {
 
 export interface JssGraphQlComponentPropsWithParams<T, P>
   extends JssGraphQlComponentProps<T> {
-  params: P;
+  params?: P;
 }
 
 export interface SitecoreContext<T> {

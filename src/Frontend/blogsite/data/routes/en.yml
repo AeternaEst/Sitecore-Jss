@@ -22,8 +22,11 @@ placeholders:
   ph_main:
     - componentName: BlogApp
       placeholders:
-        ph_blog_app:
-          - componentName: TopMenu
-            fields: 
-              searchText: Search
-          - id: navigation-bar
+        ph_blog_app_top:
+          - componentName: BackgroundWrapper
+            placeholders:
+              ph_background_wrapper:
+                - componentName: TopMenu
+                  fields: 
+                    searchText: Search
+                - id: navigation-bar

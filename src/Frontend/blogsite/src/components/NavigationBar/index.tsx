@@ -41,7 +41,7 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
   return (
     <div
       className={`navigation-bar ${
-        props.params.showSocialIcons ? "navigation-bar--with-social-icons" : ""
+        props.params?.showSocialIcons ? "navigation-bar--with-social-icons" : ""
       }`}
     >
       <div className="navigation-bar__navigation-items">
@@ -55,7 +55,7 @@ const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
         ))}
       </div>
 
-      {props.params.showSocialIcons && (
+      {props.params?.showSocialIcons && (
         <div className="navigation-bar__social-media">
           {social.children.map((socialIcon: SocialIconJss) => (
             <a

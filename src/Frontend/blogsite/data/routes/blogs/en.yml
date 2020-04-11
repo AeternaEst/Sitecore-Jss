@@ -22,7 +22,7 @@ placeholders:
   ph_main:
     - componentName: BlogApp
       placeholders:
-        ph_blog_app:
+        ph_blog_app_center:
           - componentName: TopMenu
             fields: 
               searchText: Search

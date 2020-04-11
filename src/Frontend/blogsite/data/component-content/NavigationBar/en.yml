@@ -5,5 +5,7 @@
 id: navigation-bar
 componentName: NavigationBar
 displayName: Navigation Bar
+params: 
+  showSocialIcons: "0"
 
 
