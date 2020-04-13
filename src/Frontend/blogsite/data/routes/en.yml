@@ -50,3 +50,39 @@ placeholders:
                         fields:
                           blogLink:
                             id: astralis
+        ph_blog_app_center:
+          - componentName: StandardSpotGrid
+            placeholders:
+              ph_standard_spot_grid:
+                - componentName: StandardSpot
+                  fields:
+                    heading: Lorem ipsum
+                    manchet: lorem ipsum dolor sit amet
+                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    image: 
+                      src: "/data/media/img/astralis_logo.jpg"
+                      alt: "blog text"
+                - componentName: StandardSpot
+                  fields:
+                    heading: Lorem ipsum
+                    manchet: lorem ipsum dolor sit amet
+                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    image: 
+                      src: "/data/media/img/astralis_logo.jpg"
+                      alt: "blog text"
+                - componentName: StandardSpot
+                  fields:
+                    heading: Lorem ipsum
+                    manchet: lorem ipsum dolor sit amet
+                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    image: 
+                      src: "/data/media/img/astralis_logo.jpg"
+                      alt: "blog text"
+                - componentName: StandardSpot
+                  fields:
+                    heading: Lorem ipsum
+                    manchet: lorem ipsum dolor sit amet
+                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    image: 
+                      src: "/data/media/img/astralis_logo.jpg"
+                      alt: "blog text"
