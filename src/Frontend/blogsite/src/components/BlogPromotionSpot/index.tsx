@@ -8,6 +8,8 @@ import { BlogPostProps } from "../BlogPost";
 export interface BlogPromotionSpotProps {
   blogLink: {
     fields: BlogPostProps;
+    id?: string;
+    url?: string;
   };
 }
 
@@ -25,11 +27,12 @@ const BlogPromotionSpot: FunctionComponent<JssComponentProps<
   const fields = props.fields.blogLink.fields;
 
   return (
-    <div
+    <a
       className="blog-promotion-spot"
       style={{
         backgroundImage: `url(${fields.image.value.src})`
       }}
+      href={props.fields.blogLink.url || "#"}
     >
       <div className="blog-promotion-spot__content">
         <Text
@@ -60,7 +63,7 @@ const BlogPromotionSpot: FunctionComponent<JssComponentProps<
           }`}
         />
       </div>
-    </div>
+    </a>
   );
 };
 
