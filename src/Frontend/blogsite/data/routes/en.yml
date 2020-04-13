@@ -43,13 +43,13 @@ placeholders:
                           smallTexts: "1"
                         fields:
                           blogLink:
-                            id: astralis
+                            id: roman-empire
                       - componentName: BlogPromotionSpot
                         params: 
                           smallTexts: "1"
                         fields:
                           blogLink:
-                            id: astralis
+                            id: space-exploration
         ph_blog_app_center:
           - componentName: StandardSpotGrid
             placeholders:
