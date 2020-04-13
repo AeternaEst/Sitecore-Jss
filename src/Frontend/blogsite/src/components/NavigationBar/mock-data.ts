@@ -1,9 +1,13 @@
 import { NavigationBarProps, NavigationBarParams } from "./index";
-import { JssGraphQlComponentPropsWithParams } from "../../types/sitecore/layoutServiceTypes";
-import { homeMock, renderingMock } from "../../types/sitecore/mock-data";
+import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
+import {
+  homeMock,
+  renderingMock,
+  contextMock
+} from "../../types/sitecore/mock-data";
 import { socialRootMock } from "../../types/domain/SocialIcon/mock-data";
 
-export const getNavigationBarPropsMock = (): JssGraphQlComponentPropsWithParams<
+export const getNavigationBarPropsMock = (): JssGraphQlComponentProps<
   NavigationBarProps,
   NavigationBarParams
 > => {
@@ -17,7 +21,8 @@ export const getNavigationBarPropsMock = (): JssGraphQlComponentPropsWithParams<
     params: {
       showSocialIcons: showSocialIcons()
     },
-    rendering: renderingMock
+    rendering: renderingMock,
+    sitecoreContext: contextMock
   };
 };
 

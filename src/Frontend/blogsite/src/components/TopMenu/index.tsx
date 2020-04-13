@@ -23,8 +23,8 @@ export interface TopMenuProps {
   };
 }
 
-const TopMenu: FunctionComponent<JssGraphQlComponentProps<TopMenuProps>> = (
-  props: JssGraphQlComponentProps<TopMenuProps>
+const TopMenu: FunctionComponent<JssGraphQlComponentProps<TopMenuProps, {}>> = (
+  props: JssGraphQlComponentProps<TopMenuProps, {}>
 ): React.ReactElement => {
   console.log("TopMenu", props);
 

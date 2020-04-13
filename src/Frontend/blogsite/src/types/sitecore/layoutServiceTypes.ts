@@ -1,35 +1,27 @@
 import { ComponentFactory } from "@sitecore-jss/sitecore-jss-react/types/components/sharedTypes";
 import { ComponentRendering } from "@sitecore-jss/sitecore-jss/types/dataModels";
 
-export interface JssComponent<T> {
+export interface JssComponent {
   rendering: ComponentRendering;
   componentFactory?: ComponentFactory;
-  sitecoreContext?: SitecoreContext<T>;
 }
 
-export interface JssComponentProps<T> extends JssComponent<T> {
-  fields: T;
-}
-
-export interface JssComponentPropsWithParams<T, P> extends JssComponent<T> {
+export interface JssComponentProps<T, P> extends JssComponent {
   fields: T;
   params?: P;
 }
 
-export interface JssComponentPropsWithContext<T> extends JssComponent<T> {
+export interface JssComponentPropsWithContext<T> extends JssComponent {
   fields: T;
   sitecoreContext: SitecoreContext<T>;
 }
 
-export interface JssGraphQlComponentProps<T> extends JssComponent<T> {
+export interface JssGraphQlComponentProps<T, P> extends JssComponent {
   fields: {
     data: T;
   };
-}
-
-export interface JssGraphQlComponentPropsWithParams<T, P>
-  extends JssGraphQlComponentProps<T> {
   params?: P;
+  sitecoreContext: SitecoreContext<T>;
 }
 
 export interface SitecoreContext<T> {

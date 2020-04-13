@@ -1,16 +1,11 @@
 import { isDisconnectedMode } from "./layout-service";
-import {
-  JssGraphQlComponentPropsWithParams,
-  JssGraphQlComponentProps
-} from "../types/sitecore/layoutServiceTypes";
+import { JssGraphQlComponentProps } from "../types/sitecore/layoutServiceTypes";
 
 export const getMockOrConnectedProps = <T, P>(
-  getMock: () =>
-    | JssGraphQlComponentPropsWithParams<T, P>
-    | JssGraphQlComponentProps<T>,
-  props: JssGraphQlComponentPropsWithParams<T, P> | JssGraphQlComponentProps<T>,
+  getMock: () => JssGraphQlComponentProps<T, P>,
+  props: JssGraphQlComponentProps<T, P>,
   componentName: string
-): JssGraphQlComponentPropsWithParams<T, P> | JssGraphQlComponentProps<T> => {
+): JssGraphQlComponentProps<T, P> => {
   if (isDisconnectedMode(props.sitecoreContext) || !props.fields?.data) {
     console.log(
       `disconnected or no data. Returning mock data for ${componentName}`
@@ -18,5 +13,5 @@ export const getMockOrConnectedProps = <T, P>(
     return getMock();
   }
 
-  return props as JssGraphQlComponentPropsWithParams<T, P>;
+  return props;
 };

@@ -3,7 +3,7 @@ import { Text, Link } from "@sitecore-jss/sitecore-jss-react";
 import { JssComponentProps } from "../../types/sitecore/layoutServiceTypes";
 import {
   ContentListField,
-  Field,
+  Field
 } from "../../types/sitecore/layoutServiceFieldTypes";
 import "./_styles.css";
 import { SocialIcon } from "../../types/domain/SocialIcon/socialIcon";
@@ -13,8 +13,8 @@ interface SocialBarProps {
   socialLinks: ContentListField<SocialIcon>[];
 }
 
-const SocialBar: FunctionComponent<JssComponentProps<SocialBarProps>> = (
-  props: JssComponentProps<SocialBarProps>
+const SocialBar: FunctionComponent<JssComponentProps<SocialBarProps, {}>> = (
+  props: JssComponentProps<SocialBarProps, {}>
 ): React.ReactElement => {
   console.log("SocialBar", props);
   return (
@@ -24,7 +24,7 @@ const SocialBar: FunctionComponent<JssComponentProps<SocialBarProps>> = (
         field={props.fields.shareText}
         tag="span"
       />
-      {props.fields.socialLinks.map((socialLink) => (
+      {props.fields.socialLinks.map(socialLink => (
         <Link
           key={socialLink.id}
           className={`social-bar__link social-bar__link--theme-${

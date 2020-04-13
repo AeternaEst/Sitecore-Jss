@@ -14,9 +14,10 @@ interface StandardSpotProps {
   image: Field<ImageField>;
 }
 
-const StandardSpot: FunctionComponent<JssComponentProps<StandardSpotProps>> = (
-  props: JssComponentProps<StandardSpotProps>
-): React.ReactElement => (
+const StandardSpot: FunctionComponent<JssComponentProps<
+  StandardSpotProps,
+  {}
+>> = (props: JssComponentProps<StandardSpotProps, {}>): React.ReactElement => (
   <div className="standard-spot">
     <Image className="standard-spot__image" field={props.fields.image} />
     <Text

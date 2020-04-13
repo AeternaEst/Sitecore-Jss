@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Text } from "@sitecore-jss/sitecore-jss-react";
-import { JssComponentPropsWithParams } from "../../types/sitecore/layoutServiceTypes";
+import { JssComponentProps } from "../../types/sitecore/layoutServiceTypes";
 import "./_styles.css";
 import { removeTimeFromDate } from "../../utilities/layout-service";
 import { BlogPostProps } from "../BlogPost";
@@ -15,14 +15,11 @@ interface BlogPromotionParams {
   smallTexts: string;
 }
 
-const BlogPromotionSpot: FunctionComponent<JssComponentPropsWithParams<
+const BlogPromotionSpot: FunctionComponent<JssComponentProps<
   BlogPromotionSpotProps,
   BlogPromotionParams
 >> = (
-  props: JssComponentPropsWithParams<
-    BlogPromotionSpotProps,
-    BlogPromotionParams
-  >
+  props: JssComponentProps<BlogPromotionSpotProps, BlogPromotionParams>
 ): React.ReactElement => {
   console.log("BlogPromotionSpot", props);
   const fields = props.fields.blogLink.fields;

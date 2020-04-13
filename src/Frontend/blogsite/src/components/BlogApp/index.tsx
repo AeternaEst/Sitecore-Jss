@@ -7,7 +7,7 @@ interface BlogAppState {
   isReady: boolean;
 }
 
-class BlogApp extends React.Component<JssComponent<{}>, BlogAppState> {
+class BlogApp extends React.Component<JssComponent, BlogAppState> {
   constructor(props: any) {
     super(props);
     this.state = {

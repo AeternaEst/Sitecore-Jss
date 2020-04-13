@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { JssGraphQlComponentPropsWithParams } from "../../types/sitecore/layoutServiceTypes";
+import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
 import { Link as RouterLink } from "react-router-dom";
 import { getNavigationBarPropsMock } from "./mock-data";
 import "./_styles.css";
@@ -21,14 +21,11 @@ export interface NavigationBarParams {
   showSocialIcons?: string;
 }
 
-const NavigationBar: FunctionComponent<JssGraphQlComponentPropsWithParams<
+const NavigationBar: FunctionComponent<JssGraphQlComponentProps<
   NavigationBarProps,
   NavigationBarParams
 >> = (
-  props: JssGraphQlComponentPropsWithParams<
-    NavigationBarProps,
-    NavigationBarParams
-  >
+  props: JssGraphQlComponentProps<NavigationBarProps, NavigationBarParams>
 ): React.ReactElement => {
   console.log("NavigationBar props", props);
 

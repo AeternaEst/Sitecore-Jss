@@ -1,5 +1,6 @@
 import { BaseSitecoreItem } from "./layoutServiceItemTypes";
 import { ComponentRendering } from "@sitecore-jss/sitecore-jss/types/dataModels";
+import { SitecoreContext } from "./layoutServiceTypes";
 
 export const blogsMock: BaseSitecoreItem = {
   id: "blogs",
@@ -8,10 +9,10 @@ export const blogsMock: BaseSitecoreItem = {
   url: "/blogs",
   pageTitle: {
     jss: {
-      value: "Blogs",
-    },
+      value: "Blogs"
+    }
   },
-  children: [],
+  children: []
 };
 
 export const homeMock: BaseSitecoreItem = {
@@ -21,12 +22,41 @@ export const homeMock: BaseSitecoreItem = {
   url: "/",
   pageTitle: {
     jss: {
-      value: "Blogify",
-    },
+      value: "Blogify"
+    }
   },
-  children: [blogsMock],
+  children: [blogsMock]
 };
 
 export const renderingMock: ComponentRendering = {
-  componentName: "mock",
+  componentName: "mock"
+};
+
+export const contextMock: SitecoreContext<any> = {
+  itemId: "Fake Id",
+  language: "en",
+  pageEditing: false,
+  pageState: "Normal",
+  site: {
+    name: "blog site"
+  },
+  route: {
+    databaseName: "available-in-connected-mode",
+    deviceId: "Fake Id",
+    fields: {},
+    itemId: "Fake Id",
+    itemLanguage: "en",
+    itemVersion: 1,
+    language: "en",
+    layoutId: "Fake Id",
+    name: "Fake name",
+    pageEditing: false,
+    pageState: "Normal",
+    placeholders: [],
+    site: {
+      name: "blog site"
+    },
+    templateId: "Fake Id",
+    templateName: "Fake name"
+  }
 };

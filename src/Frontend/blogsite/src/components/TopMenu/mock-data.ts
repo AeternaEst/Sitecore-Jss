@@ -1,9 +1,16 @@
 import { TopMenuProps } from "./index";
 import { JssGraphQlComponentProps } from "../../types/sitecore/layoutServiceTypes";
-import { homeMock, renderingMock } from "../../types/sitecore/mock-data";
+import {
+  homeMock,
+  renderingMock,
+  contextMock
+} from "../../types/sitecore/mock-data";
 import { socialRootMock } from "../../types/domain/SocialIcon/mock-data";
 
-export const getTopMenuPropsMock = (): JssGraphQlComponentProps<TopMenuProps> => {
+export const getTopMenuPropsMock = (): JssGraphQlComponentProps<
+  TopMenuProps,
+  {}
+> => {
   return {
     fields: {
       data: {
@@ -13,12 +20,13 @@ export const getTopMenuPropsMock = (): JssGraphQlComponentProps<TopMenuProps> =>
           id: "topMenuDataSource",
           searchText: {
             jss: {
-              value: "Search",
-            },
-          },
-        },
-      },
+              value: "Search"
+            }
+          }
+        }
+      }
     },
     rendering: renderingMock,
+    sitecoreContext: contextMock
   };
 };

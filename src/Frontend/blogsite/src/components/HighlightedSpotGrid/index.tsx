@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
-import { JssComponentProps } from "../../types/sitecore/layoutServiceTypes";
+import { JssComponent } from "../../types/sitecore/layoutServiceTypes";
 import "./_styles.css";
 import { Placeholder } from "@sitecore-jss/sitecore-jss-react";
 
-const HighlightedSpotGrid: FunctionComponent<JssComponentProps<any>> = (
-  props: JssComponentProps<any>
+const HighlightedSpotGrid: FunctionComponent<JssComponent> = (
+  props: JssComponent
 ): React.ReactElement => (
   <div className="highlighted-spot-grid">
     <div className="highlighted-spot-grid__main">

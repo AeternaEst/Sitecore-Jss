@@ -4,7 +4,7 @@ import { Placeholder } from "@sitecore-jss/sitecore-jss-react";
 import "./_styles.css";
 import { JssComponent } from "../../types/sitecore/layoutServiceTypes";
 
-const FiftyFiftyGrid = (props: JssComponent<{}>) => (
+const FiftyFiftyGrid = (props: JssComponent) => (
   <div className="fifty-fifty-grid">
     {console.log("FiftyFiftyGrid", props)}
     <div className="fifty-fifty-grid__left">
