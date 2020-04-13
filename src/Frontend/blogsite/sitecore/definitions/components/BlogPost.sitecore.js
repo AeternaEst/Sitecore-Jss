@@ -14,16 +14,8 @@ export default function(manifest) {
   manifest.addComponent({
     name: "BlogPost",
     icon: SitecoreIcon.DocumentTag,
-    fields: [
-      { name: "title", type: CommonFieldTypes.SingleLineText },
-      { name: "date", type: CommonFieldTypes.Date },
-      { name: "category", type: CommonFieldTypes.SingleLineText },
-      { name: "text", type: CommonFieldTypes.RichText },
-      { name: "image", type: CommonFieldTypes.Image },
-      { name: "imageHeading", type: CommonFieldTypes.SingleLineText },
-      { name: "imageManchet", type: CommonFieldTypes.SingleLineText }
-    ],
-    placeholders: ["ph_blog_post"]
+    placeholders: ["ph_blog_post"],
+    inherits: ["BlogPostAppRoute"]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

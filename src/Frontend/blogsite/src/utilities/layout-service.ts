@@ -6,7 +6,7 @@ export const DISCONNECTED_MODE_IDENTIFIER = "available-in-connected-mode";
 export const removeTimeFromDate = (dateField: Field<string>): Field<string> => {
   const date = dateField.value.substring(0, dateField.value.indexOf("T"));
   return {
-    value: date,
+    value: date
   };
 };
 
