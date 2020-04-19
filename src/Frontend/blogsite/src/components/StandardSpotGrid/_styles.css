@@ -1,6 +1,6 @@
 .standard-spot-grid {
     display: flex;
     flex-flow: row wrap;
-    margin: 50px 0px;
+    padding: 50px 0px;
     justify-content: space-between;
 }

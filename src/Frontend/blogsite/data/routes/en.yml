@@ -56,33 +56,25 @@ placeholders:
               ph_standard_spot_grid:
                 - componentName: StandardSpot
                   fields:
-                    heading: Lorem ipsum
-                    manchet: lorem ipsum dolor sit amet
+                    heading: AC Milan defeats Genoa
+                    manchet: Returning to former glory
                     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     image: 
-                      src: "/data/media/img/astralis_logo.jpg"
+                      src: "/data/media/img/ac_milan_logo_spot.jpg"
                       alt: "blog text"
+                - componentName: QuoteSpot
+                  fields:
+                    quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    source: Arnold schwarzenegger
                 - componentName: StandardSpot
                   fields:
-                    heading: Lorem ipsum
-                    manchet: lorem ipsum dolor sit amet
+                    heading: Artificial intelligence
+                    manchet: Friend or foe ?
                     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     image: 
-                      src: "/data/media/img/astralis_logo.jpg"
+                      src: "/data/media/img/ai_spot.jpg"
                       alt: "blog text"
-                - componentName: StandardSpot
+                - componentName: QuoteSpot
                   fields:
-                    heading: Lorem ipsum
-                    manchet: lorem ipsum dolor sit amet
-                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    image: 
-                      src: "/data/media/img/astralis_logo.jpg"
-                      alt: "blog text"
-                - componentName: StandardSpot
-                  fields:
-                    heading: Lorem ipsum
-                    manchet: lorem ipsum dolor sit amet
-                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    image: 
-                      src: "/data/media/img/astralis_logo.jpg"
-                      alt: "blog text"
+                    quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    source: jean claude van damme

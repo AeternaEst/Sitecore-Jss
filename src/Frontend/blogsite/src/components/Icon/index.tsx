@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { getSvg } from "../../utilities/svg-util";
 import "./_styles.css";
 
-export type IconId = "facebook" | "google" | "twitter" | "search";
+export type IconId = "facebook" | "google" | "twitter" | "search" | "quote";
 
 interface IconProps {
   id: IconId;

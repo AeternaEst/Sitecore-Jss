@@ -114,7 +114,7 @@ import "./_styles.css";
     title: Field<string>;
   }
 
-  const ${componentName}: FunctionComponent<JssComponentProps<${propsName}>> = (props: JssComponentProps<${propsName}>): React.ReactElement => (
+  const ${componentName}: FunctionComponent<JssComponentProps<${propsName}, {}>> = (props: JssComponentProps<${propsName}, {}>): React.ReactElement => (
     <div className="${className}">
       <Text field={props.fields.title} />
     </div>
