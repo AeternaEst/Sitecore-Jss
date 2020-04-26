@@ -57,7 +57,9 @@ placeholders:
                 - componentName: StandardSpot
                   fields:
                     heading: AC Milan defeats Genoa
-                    manchet: Returning to former glory
+                    link: 
+                      href: /blogs/ac-milan
+                      text: "Read More"
                     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     image: 
                       src: "/data/media/img/ac_milan_logo_spot.jpg"
@@ -69,7 +71,9 @@ placeholders:
                 - componentName: StandardSpot
                   fields:
                     heading: Artificial intelligence
-                    manchet: Friend or foe ?
+                    link: 
+                      href: /blogs/ai
+                      text: "Read More"
                     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     image: 
                       src: "/data/media/img/ai_spot.jpg"

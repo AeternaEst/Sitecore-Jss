@@ -2,7 +2,7 @@
 import {
   CommonFieldTypes,
   SitecoreIcon,
-  Manifest
+  Manifest,
 } from "@sitecore-jss/sitecore-jss-manifest";
 
 /**
@@ -16,10 +16,10 @@ export default function(manifest) {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: "heading", type: CommonFieldTypes.SingleLineText },
-      { name: "manchet", type: CommonFieldTypes.SingleLineText },
+      { name: "link", type: CommonFieldTypes.GeneralLink },
       { name: "text", type: CommonFieldTypes.SingleLineText },
-      { name: "image", type: CommonFieldTypes.Image }
-    ]
+      { name: "image", type: CommonFieldTypes.Image },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

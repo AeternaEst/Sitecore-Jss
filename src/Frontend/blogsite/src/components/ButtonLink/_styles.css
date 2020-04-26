@@ -1,0 +1,21 @@
+.button-link {
+    margin: 10px 0px;
+}
+
+.button-link--full-width {
+    display: flex;
+}
+
+.button-link__link {
+    text-decoration: none;
+    border: 1px solid #4d4d4d;
+    padding: 5px 10px;
+    background-color: #05abf1;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.button-link__link--full-width {
+    width: 100%;
+    text-align: center;
+}
